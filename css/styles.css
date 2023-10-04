@@ -1,0 +1,310 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+    position: relative;
+}
+
+main{
+    margin-bottom: 250px;
+}
+
+#logo{
+    position: absolute;
+    top: 10px;
+    left: 9.5%;
+}
+
+/* NAVBAR */
+
+#logo img {
+    width: 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #161616;
+    padding: 20px;
+    text-transform: uppercase;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 10px;
+    padding: 5px;
+}
+
+.navbar .navLink{
+    color: #fff;
+    text-decoration: none;
+    transform: .5s;
+    font-size: 14px;
+}
+
+.navbar .navLink:hover{
+    color: #999;
+}
+
+
+/* HOME */
+
+.titleContainer{
+    min-width: 500px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.titleContainer h1{
+    font-size: 50px;
+}
+
+.titleContainer p{
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.postsContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.postBox:first-child{
+    min-width: 100%;
+}
+
+.postBox{
+    flex: 1 1 0;
+    margin-bottom: 20px;
+}
+
+.postBox:nth-child(3){
+   margin: 0 1%;
+}
+
+.postBox img{
+    width: 100%;
+}
+
+.postBox .postTitle{
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.postBox .postTitle a{
+    color: #000;
+    transition: .5s;
+}
+
+.postBox .postTitle a:hover{
+    color: #999;
+}
+
+.postBox .postDescription{
+    color: #666;
+}
+
+.tagsContainer{
+    margin-top: 10px;
+}
+
+.tagsContainer a{
+    font-size: 14px;
+    color: #333;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* POST */
+
+.postContainer{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "main sidebar";
+    grid-gap: 10px;
+    padding-top: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 250px;
+}
+
+.contentContainer{
+   grid-area: main; 
+}
+
+.mainTitle{
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.postDescription{
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.postContent{
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+.imgContainer{
+    margin-bottom: 30px;
+}
+
+.imgContainer img{
+    width: 60%;
+}
+
+
+/* POST ASIDE */
+
+.navContainer{
+    grid-area: sidebar;
+}
+
+.tagsTitle, .categoriesTitle{
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-weight: 300;
+}
+
+.tagList, .categoriesList{
+    list-style: none;
+  }
+  
+  .tagList li, .categoriesList li {
+    margin-bottom: 10px;
+  }
+  
+  .tagList a, .categoriesList a {
+    color: #666;
+    transition: .5s;
+  }
+  
+  .tagList a:hover, .categoriesList a:hover {
+    color: #000;
+  }
+
+
+
+/* CONTATO*/  
+
+.contatoContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    border: solid 1.5px transparent;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #161616;
+    border: solid 1.5px #fff;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 800px;
+    background-color: #161616;
+    color: #fff;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+/* FOOTER */
+
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+/* MOBILE */
+
+@media(max-width: 480px) {
+
+    /* HOME */
+    header {
+      width: 100%;
+    }
+  
+    #logo {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      left: 0;
+      width: 50px;
+    }
+  
+    .navbar {
+      display: none;
+    }
+  
+    .titleContainer {
+      min-width: 100%;
+      margin-top: 20px;
+    }
+  
+    .postsContainer {
+      margin-top: 20px;
+    }
+  
+    .postBox {
+      flex: 100% 1 0;
+      padding: 15px;
+      margin: 0;
+    }
+  
+    /* POST */
+    .postContainer {
+      grid-template-columns: 100%;
+      padding: 15px;
+      grid-template-areas: "main"
+      "sidebar";
+    }
+  
+    .img-container img {
+      width: 100%;
+    }
+  
+  }
